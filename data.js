@@ -1,6 +1,6 @@
 const danhSachTrungTuyen = [
-  "Kay",
-  "NguyenVanA",
+  "DOGEUxP24",
+  "Baotom12",
   "TranVanB",
   "Test123"
 ];
@@ -29,3 +29,4 @@ function traCuu() {
     `;
   }
 }
+
