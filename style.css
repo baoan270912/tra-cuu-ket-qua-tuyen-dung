@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background */
+.background {
+  position: fixed;
+  inset: 0;
+  background: url("background.jpg") center/cover no-repeat;
+  z-index: -3;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(120, 0, 0, 0.55);
+  z-index: -2;
+}
+
+/* Logo */
+.logo {
+  position: fixed;
+  top: 50%;
+  width: 260px;
+  opacity: 0.18;
+  transform: translateY(-50%);
+  z-index: -1;
+  animation: logoPulse 6s ease-in-out infinite;
+}
+
+.logo.left {
+  left: 5%;
+}
+
+.logo.right {
+  right: 5%;
+}
+
+@keyframes logoPulse {
+  0%,100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-50%) scale(1.1); }
+}
+
+/* Nội dung */
+.content {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 90px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: 0 0 12px rgba(255,215,0,0.6);
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+/* Tìm kiếm */
+.search-area {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  animation: slideUp 0.8s ease;
+}
+
+.search-area input {
+  width: 360px;
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 12px rgba(255,255,255,0.25);
+}
+
+.search-area button {
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  background: #0a7a34;
+  color: white;
+  cursor: pointer;
+}
+
+.search-area button:hover {
+  background: #13b95d;
+}
+
+/* Kết quả */
+.result {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.success {
+  color: #00ff99;
+  animation: slideUp 0.6s ease;
+}
+
+.fail {
+  color: #ffb3b3;
+  animation: slideUp 0.6s ease;
+}
+
+.group-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #005eff;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.group-link:hover {
+  background: #2f7bff;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.title {
+  animation: fadeDown 1.2s ease forwards;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.search-area input:focus {
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 20px rgba(255,215,0,0.4);
+  transition: 0.3s;
+}
+.success, .fail {
+  animation: popUp 0.6s ease;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.flag-overlay {
+  position: fixed;
+  inset: -10%;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  opacity: 0.12;
+  z-index: -2;
+  pointer-events: none;
+  animation: flagWave 40s ease-in-out infinite alternate;
+}
+
+@keyframes flagWave {
+  from {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  to {
+    transform: translateX(-30px) translateY(20px) scale(1.03);
+  }
+}
+
+.dust-container {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.dust-container span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255
