@@ -1,8 +1,8 @@
 const danhSachTrungTuyen = [
   "DOGEUxP24",
   "Baotom12",
-  "TranVanB",
-  "Test123"
+  "nguyendinhhaidang16",
+  "Uchiha_henaku"
 ];
 
 function traCuu() {
@@ -32,5 +32,6 @@ function traCuu() {
     `;
   }
 }
+
 
 
