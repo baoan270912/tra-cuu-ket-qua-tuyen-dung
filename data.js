@@ -19,6 +19,9 @@ function traCuu() {
       <div class="success">
         🎉 Chúc mừng bạn  <strong>${input}</strong> 🎉 đã trúng tuyển vào nghĩa vụ quân sự.<br>
         Vui lòng chờ thông báo tiếp theo từ ban tuyển quân.
+         <br><br>
+        <a class="group-link" href="${linkGroupRoblox}" target="_blank">
+          👉 Link Group Roblox
       </div>
     `;
   } else {
@@ -29,4 +32,5 @@ function traCuu() {
     `;
   }
 }
+
 
